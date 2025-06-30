@@ -20,7 +20,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/cs-draw-14-final">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/food" element={<Food />} />
