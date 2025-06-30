@@ -1,207 +1,153 @@
 
-import Header from "@/components/Header";
-import CategorySection from "@/components/CategorySection";
+import { Link } from "react-router-dom";
+import PageLayout from "@/components/PageLayout";
+import { Utensils, Building, Car, BookOpen, Coffee, MapPin } from "lucide-react";
 
 const Index = () => {
   const categories = [
     {
       id: "food",
       title: "食",
-      icon: "🍜",
-      description: "校園周邊美食推薦",
-      items: [
-        {
-          name: "博愛路夜市",
-          description: "傳統小吃聚集地，有臭豆腐、鹽酥雞、珍珠奶茶等道地台灣美食",
-          distance: "步行3分鐘",
-          rating: "4.5"
-        },
-        {
-          name: "麥當勞博愛店",
-          description: "24小時營業的速食餐廳，學生讀書聚會的熱門選擇",
-          distance: "步行5分鐘",
-          rating: "4.2"
-        },
-        {
-          name: "老張牛肉麵",
-          description: "50年老店，招牌紅燒牛肉麵深受學生喜愛",
-          distance: "步行8分鐘",
-          rating: "4.7"
-        },
-        {
-          name: "星巴克咖啡",
-          description: "舒適的學習環境，提供WiFi和充電插座",
-          distance: "步行6分鐘",
-          rating: "4.3"
-        }
-      ]
+      icon: Utensils,
+      description: "品味周邊美食文化",
+      path: "/food",
+      color: "from-red-400 to-orange-500"
     },
     {
       id: "housing",
       title: "住",
-      icon: "🏠",
-      description: "住宿選擇與租屋資訊",
-      items: [
-        {
-          name: "學生宿舍",
-          description: "校內宿舍提供安全舒適的住宿環境，設有交誼廳和洗衣設備",
-          distance: "校內",
-          rating: "4.4"
-        },
-        {
-          name: "博愛套雅房",
-          description: "鄰近學校的學生套房，含基本傢俱和網路",
-          distance: "步行5分鐘",
-          rating: "4.1"
-        },
-        {
-          name: "和平東路公寓",
-          description: "交通便利的分租套房，近捷運站",
-          distance: "步行12分鐘",
-          rating: "4.0"
-        },
-        {
-          name: "青年旅館",
-          description: "短期住宿的經濟選擇，設施完善",
-          distance: "步行10分鐘",
-          rating: "4.2"
-        }
-      ]
+      icon: Building,
+      description: "尋找理想居住環境",
+      path: "/housing",
+      color: "from-blue-400 to-indigo-500"
     },
     {
       id: "transport",
       title: "行",
-      icon: "🚌",
-      description: "交通運輸資訊",
-      items: [
-        {
-          name: "古亭捷運站",
-          description: "松山新店線與中和新蘆線交會站，前往台北各地都很方便",
-          distance: "步行8分鐘",
-          rating: "4.6"
-        },
-        {
-          name: "公車站牌",
-          description: "多條公車路線經過，包含15、18、52、253等路線",
-          distance: "校門口",
-          rating: "4.3"
-        },
-        {
-          name: "YouBike站點",
-          description: "校園周邊設有多個YouBike租借點，騎行便利",
-          distance: "步行2分鐘",
-          rating: "4.4"
-        },
-        {
-          name: "計程車招呼站",
-          description: "24小時都有計程車服務，雨天通勤的好選擇",
-          distance: "校門口",
-          rating: "4.2"
-        }
-      ]
+      icon: Car,
+      description: "掌握交通便利資訊",
+      path: "/transport",
+      color: "from-green-400 to-emerald-500"
     },
     {
       id: "education",
       title: "育",
-      icon: "📚",
-      description: "教育學習資源",
-      items: [
-        {
-          name: "市立圖書館總館",
-          description: "豐富的藏書和安靜的閱讀環境，提供多媒體資源",
-          distance: "步行15分鐘",
-          rating: "4.8"
-        },
-        {
-          name: "誠品書店",
-          description: "結合書店與咖啡廳，學習討論的絕佳場所",
-          distance: "步行12分鐘",
-          rating: "4.5"
-        },
-        {
-          name: "補習街",
-          description: "各種語言學習班和證照補習班聚集地",
-          distance: "步行10分鐘",
-          rating: "4.2"
-        },
-        {
-          name: "社區大學",
-          description: "提供多元化課程，終身學習的好去處",
-          distance: "步行20分鐘",
-          rating: "4.3"
-        }
-      ]
+      icon: BookOpen,
+      description: "探索學習成長資源",
+      path: "/education",
+      color: "from-purple-400 to-violet-500"
     },
     {
       id: "entertainment",
       title: "樂",
-      icon: "🎬",
-      description: "休閒娛樂場所",
-      items: [
-        {
-          name: "中正紀念堂",
-          description: "知名觀光景點，常有藝文表演和展覽活動",
-          distance: "步行15分鐘",
-          rating: "4.7"
-        },
-        {
-          name: "國家戲劇院",
-          description: "欣賞高品質表演藝術的場所，學生票價優惠",
-          distance: "步行18分鐘",
-          rating: "4.6"
-        },
-        {
-          name: "華納威秀影城",
-          description: "最新電影首選，設備新穎觀影品質佳",
-          distance: "捷運10分鐘",
-          rating: "4.4"
-        },
-        {
-          name: "大安森林公園",
-          description: "台北市之肺，適合運動休閒和戶外活動",
-          distance: "步行25分鐘",
-          rating: "4.8"
-        }
-      ]
+      icon: Coffee,
+      description: "享受多彩休閒生活",
+      path: "/entertainment",
+      color: "from-pink-400 to-rose-500"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50">
-      <Header />
-      
-      <main className="container mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            校園周邊生活指南
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            探索臺北市立大學博愛校區周邊的美好生活，從美食到住宿，從交通到娛樂，
-            讓您的校園生活更加精彩充實。
-          </p>
+    <PageLayout>
+      {/* Hero Section */}
+      <div className="text-center mb-16">
+        <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full text-5xl mb-8 shadow-xl">
+          🏫
         </div>
+        <h1 className="text-5xl md:text-6xl font-light text-gray-800 mb-6 tracking-wide">
+          臺北市立大學
+        </h1>
+        <h2 className="text-3xl md:text-4xl font-light text-amber-700 mb-8">
+          博愛校區生活指南
+        </h2>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
+          在這裡，我們為您精心整理了博愛校區周邊的生活資訊，
+          從美食到住宿，從交通到娛樂，讓您的校園生活更加精彩充實。
+        </p>
+        
+        <div className="flex items-center justify-center space-x-2 text-gray-500 mb-12">
+          <MapPin className="w-5 h-5" />
+          <span>台北市中正區愛國西路1號</span>
+        </div>
+      </div>
 
-        <div className="space-y-16">
-          {categories.map((category) => (
-            <CategorySection
+      {/* Category Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {categories.slice(0, 3).map((category) => {
+          const Icon = category.icon;
+          return (
+            <Link
               key={category.id}
-              category={category}
-            />
-          ))}
-        </div>
-      </main>
+              to={category.path}
+              className="group bg-white/70 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-amber-100 hover:border-amber-200 hover:-translate-y-2"
+            >
+              <div className="text-center">
+                <div className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br ${category.color} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-200 shadow-lg`}>
+                  <Icon className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-medium text-gray-800 mb-4">
+                  {category.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {category.description}
+                </p>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
 
-      <footer className="bg-gray-800 text-white py-12 mt-16">
-        <div className="container mx-auto px-4 text-center">
-          <h3 className="text-xl font-semibold mb-4">臺北市立大學博愛校區</h3>
-          <p className="text-gray-300 mb-2">地址：台北市中正區愛國西路1號</p>
-          <p className="text-gray-300 mb-4">電話：(02) 2311-3040</p>
-          <div className="text-sm text-gray-400">
-            © 2024 臺北市立大學博愛校區周邊生活指南 - 讓校園生活更美好
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        {categories.slice(3).map((category) => {
+          const Icon = category.icon;
+          return (
+            <Link
+              key={category.id}
+              to={category.path}
+              className="group bg-white/70 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-amber-100 hover:border-amber-200 hover:-translate-y-2"
+            >
+              <div className="text-center">
+                <div className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br ${category.color} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-200 shadow-lg`}>
+                  <Icon className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-medium text-gray-800 mb-4">
+                  {category.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {category.description}
+                </p>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+
+      {/* Welcome Message */}
+      <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-12 border border-amber-100 text-center">
+        <h2 className="text-3xl font-light text-gray-800 mb-6">
+          歡迎來到博愛校區
+        </h2>
+        <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
+          博愛校區不僅是學習的殿堂，更是生活的起點。在這個充滿活力的環境中，
+          您將發現無數的可能性。從傳統的台灣小吃到現代的咖啡文化，
+          從便利的交通網絡到豐富的文化資源，一切都在您的指尖。
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-500">
+          <div>
+            <h4 className="font-medium text-gray-700 mb-2">便利生活</h4>
+            <p>捷運、公車四通八達，生活機能完善便利</p>
+          </div>
+          <div>
+            <h4 className="font-medium text-gray-700 mb-2">文化薫陶</h4>
+            <p>鄰近中正紀念堂，藝文活動豐富多彩</p>
+          </div>
+          <div>
+            <h4 className="font-medium text-gray-700 mb-2">學習資源</h4>
+            <p>圖書館、書店林立，學習環境優質</p>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </PageLayout>
   );
 };
 
