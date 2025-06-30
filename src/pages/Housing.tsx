@@ -66,7 +66,7 @@ const Housing = () => {
   return (
     <PageLayout 
       title="安居樂業" 
-      subtitle="為您推薦博愛校區周邊優質住宿選擇，從校內宿舍到校外租屋，找到最適合的居住環境"
+      subtitle="台北市立大學周邊優越地理位置，結合中正區核心、古亭商圈，生活機能完善，交通便利"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {accommodations.map((accommodation, index) => (
@@ -75,32 +75,31 @@ const Housing = () => {
       </div>
       
       <div className="mt-12 bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-amber-100">
-        <h2 className="text-2xl font-medium text-gray-800 mb-6">租屋指南</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <h2 className="text-2xl font-medium text-gray-800 mb-6">居住環境特色</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <h3 className="font-medium text-gray-700 mb-3">預算規劃</h3>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>• 房租不超過月收入1/3</li>
-              <li>• 預留押金和仲介費</li>
-              <li>• 考慮水電網路費用</li>
+            <h3 className="font-medium text-gray-700 mb-4">地理位置優勢</h3>
+            <ul className="space-y-3 text-sm text-gray-600">
+              <li>• <span className="font-medium">中正區核心</span>：位於台北市政治文化中心</li>
+              <li>• <span className="font-medium">古亭商圈</span>：生活採買便利，商店林立</li>
+              <li>• <span className="font-medium">交通樞紐</span>：捷運、公車網絡完善</li>
+              <li>• <span className="font-medium">歷史文化</span>：從清朝鼓亭到現代博愛特區</li>
             </ul>
           </div>
           <div>
-            <h3 className="font-medium text-gray-700 mb-3">看房重點</h3>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>• 檢查水電設施</li>
-              <li>• 確認網路品質</li>
-              <li>• 了解周邊環境</li>
+            <h3 className="font-medium text-gray-700 mb-4">生活機能完善</h3>
+            <ul className="space-y-3 text-sm text-gray-600">
+              <li>• <span className="font-medium">商業機能</span>：銀行、郵局、醫院齊全</li>
+              <li>• <span className="font-medium">餐飲選擇</span>：從傳統小吃到異國料理</li>
+              <li>• <span className="font-medium">文化景點</span>：中正紀念堂、植物園鄰近</li>
+              <li>• <span className="font-medium">教育環境</span>：書香氣息濃厚，學習氛圍佳</li>
             </ul>
           </div>
-          <div>
-            <h3 className="font-medium text-gray-700 mb-3">簽約注意</h3>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>• 仔細閱讀合約條款</li>
-              <li>• 拍照記錄房屋現況</li>
-              <li>• 確認退租相關規定</li>
-            </ul>
-          </div>
+        </div>
+        <div className="mt-8">
+          <p className="text-sm text-gray-600 leading-relaxed">
+            無論是學生宿舍或周邊租屋選擇，都能享受便利的都市生活。這裡不僅是學習的理想環境，更是體驗台北城市變遷與文化交融的最佳據點。
+          </p>
         </div>
       </div>
     </PageLayout>

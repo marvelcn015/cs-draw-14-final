@@ -1,6 +1,6 @@
 
 import { Link, useLocation } from "react-router-dom";
-import { Home, Utensils, Building, Car, BookOpen, Coffee } from "lucide-react";
+import { Home, Utensils, Building, Car, BookOpen, Coffee, Users } from "lucide-react";
 
 const Navigation = () => {
   const location = useLocation();
@@ -12,6 +12,7 @@ const Navigation = () => {
     { path: "/transport", label: "行", icon: Car },
     { path: "/education", label: "育", icon: BookOpen },
     { path: "/entertainment", label: "樂", icon: Coffee },
+    { path: "/about", label: "關於", icon: Users },
   ];
 
   return (

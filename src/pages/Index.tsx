@@ -9,7 +9,7 @@ const Index = () => {
       id: "food",
       title: "食",
       icon: Utensils,
-      description: "品味周邊美食文化",
+      description: "從傳統市場到精致料理，跟隨味蚕的冒險地圖",
       path: "/food",
       color: "from-red-400 to-orange-500"
     },
@@ -17,7 +17,7 @@ const Index = () => {
       id: "housing",
       title: "住",
       icon: Building,
-      description: "尋找理想居住環境",
+      description: "在歷史與現代交匯的地方，找到屬於你的家",
       path: "/housing",
       color: "from-blue-400 to-indigo-500"
     },
@@ -25,7 +25,7 @@ const Index = () => {
       id: "transport",
       title: "行",
       icon: Car,
-      description: "掌握交通便利資訊",
+      description: "縱橫台北的交通網絡，連接夢想與現實",
       path: "/transport",
       color: "from-green-400 to-emerald-500"
     },
@@ -33,7 +33,7 @@ const Index = () => {
       id: "education",
       title: "育",
       icon: BookOpen,
-      description: "探索學習成長資源",
+      description: "百年樹人的教育大業，在這裡繼續發光發熱",
       path: "/education",
       color: "from-purple-400 to-violet-500"
     },
@@ -41,7 +41,7 @@ const Index = () => {
       id: "entertainment",
       title: "樂",
       icon: Coffee,
-      description: "享受多彩休閒生活",
+      description: "文化與藝術的殿堂，為生活增添無限色彩",
       path: "/entertainment",
       color: "from-pink-400 to-rose-500"
     }
@@ -61,8 +61,8 @@ const Index = () => {
           博愛校區生活指南
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
-          在這裡，我們為您精心整理了博愛校區周邊的生活資訊，
-          從美食到住宿，從交通到娛樂，讓您的校園生活更加精彩充實。
+          位於台北市中正區的教育重鎮，這裡不僅是重要的教育據點，更是結合歷史文化、現代便利與豐富生活機能的黃金區域。
+          從清朝的古亭哨站到現代的博愛特區，見證台北城市的發展軌跡。
         </p>
         
         <div className="flex items-center justify-center space-x-2 text-gray-500 mb-12">
@@ -122,28 +122,31 @@ const Index = () => {
         })}
       </div>
 
-      {/* Welcome Message */}
+      {/* Story Section */}
       <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-12 border border-amber-100 text-center">
         <h2 className="text-3xl font-light text-gray-800 mb-6">
-          歡迎來到博愛校區
+          歷史文化與現代生活的完美交融
         </h2>
         <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
-          博愛校區不僅是學習的殿堂，更是生活的起點。在這個充滿活力的環境中，
-          您將發現無數的可能性。從傳統的台灣小吃到現代的咖啡文化，
-          從便利的交通網絡到豐富的文化資源，一切都在您的指尖。
+          從鼓亭的哨站到博愛特區的政治心臟，從府城城門到現代文創園區，臺北市立大學附近不僅擁有完善的食住行育樂機能，
+          更承載著豐富的歷史文化底蘊。這裡是學習的理想環境，也是體驗台北城市變遷與文化交融的最佳據點。
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-500">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-sm text-gray-500">
           <div>
-            <h4 className="font-medium text-gray-700 mb-2">便利生活</h4>
-            <p>捷運、公車四通八達，生活機能完善便利</p>
+            <h4 className="font-medium text-gray-700 mb-2">交通樞紐</h4>
+            <p>步行300公尺內三個捷運站，五個公車站點通往台北各區</p>
           </div>
           <div>
-            <h4 className="font-medium text-gray-700 mb-2">文化薫陶</h4>
-            <p>鄰近中正紀念堂，藝文活動豐富多彩</p>
+            <h4 className="font-medium text-gray-700 mb-2">文化景點</h4>
+            <p>中正紀念堂、植物園、華山1914等豐富文化資源</p>
           </div>
           <div>
-            <h4 className="font-medium text-gray-700 mb-2">學習資源</h4>
-            <p>圖書館、書店林立，學習環境優質</p>
+            <h4 className="font-medium text-gray-700 mb-2">美食天堂</h4>
+            <p>金峰魯肉飯、南門市場到公館夜市的多元選擇</p>
+          </div>
+          <div>
+            <h4 className="font-medium text-gray-700 mb-2">教育重鎮</h4>
+            <p>市立大學、北一女中等優質教育機構齊聚</p>
           </div>
         </div>
       </div>

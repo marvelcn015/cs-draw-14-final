@@ -7,66 +7,66 @@ const Transport = () => {
   const transportOptions = [
     {
       icon: Train,
-      title: "古亭捷運站",
-      description: "松山新店線與中和新蘆線交會站，交通樞紐",
+      title: "捷運小南門站",
+      description: "松山新店線，步行不到300公尺即可抵達",
       details: [
-        "兩線交會，轉乘便利",
-        "往台北車站僅需8分鐘",
-        "首末班車時間：06:00-24:00",
-        "出口3最靠近學校"
+        "距離學校最近的捷運站",
+        "可直達台北車站、新店、松山",
+        "營運時間：06:00-24:00",
+        "與中正紀念堂站相鄰"
       ],
-      rating: "4.6",
-      distance: "步行8分鐘",
-      price: "NT$20-50"
+      rating: "4.7",
+      distance: "步行3分鐘",
+      price: "NT$20-55"
     },
     {
       icon: Bus,
-      title: "公車路網",
-      description: "多條公車路線經過，覆蓋台北各區域",
+      title: "校園周邊公車站",
+      description: "五個便利站點，涵蓋市立大學站、市立大學附小站、一女中站",
       details: [
-        "15、18、52、253等主要路線",
-        "班次密集，等車時間短",
-        "可使用悠遊卡或一卡通",
-        "校門口即有站牌"
+        "5、241、243路線往中和",
+        "235、663往國父紀念館",
+        "251往深坑、270往中華科大",
+        "644往新店青潭、706往三峽"
       ],
-      rating: "4.3",
+      rating: "4.5",
       distance: "校門口",
       price: "NT$15"
     },
     {
-      icon: Bike,
-      title: "YouBike微笑單車",
-      description: "綠色環保的短程交通選擇，健康又便利",
+      icon: Train,
+      title: "捷運中正紀念堂站",
+      description: "松山新店線與淡水信義線交會，轉乘樞紐",
       details: [
-        "校園周邊多個租借點",
-        "前30分鐘免費（會員）",
-        "24小時自助租還",
-        "App即時查詢車位"
+        "雙線交會，轉乘便利",
+        "可達淡水、象山、新店等地",
+        "步行約300公尺可達",
+        "連通地下街購物方便"
       ],
-      rating: "4.4",
-      distance: "步行2分鐘",
-      price: "NT$5-10/30分鐘"
+      rating: "4.8",
+      distance: "步行4分鐘",
+      price: "NT$20-65"
     },
     {
-      icon: Car,
-      title: "計程車服務",
-      description: "便捷的點對點交通，雨天通勤首選",
+      icon: Train,
+      title: "捷運西門站",
+      description: "板南線與松山新店線交會，步行約1.2公里",
       details: [
-        "24小時服務，隨招隨停",
-        "可使用車隊APP叫車",
-        "起跳價85元，每200公尺5元",
-        "校門口設有招呼站"
+        "西門町商圈核心",
+        "板南線可達市政府、南港",
+        "松山新店線直達松山機場",
+        "多條公車路線匯集"
       ],
-      rating: "4.2",
-      distance: "校門口",
-      price: "起跳NT$85"
+      rating: "4.6",
+      distance: "步行15分鐘",
+      price: "NT$20-65"
     }
   ];
 
   return (
     <PageLayout 
       title="交通便利" 
-      subtitle="博愛校區交通四通八達，捷運、公車、單車多元選擇，讓您的通勤更加便捷舒適"
+      subtitle="四通八達的交通網絡，步行300公尺內三個捷運站，五個公車站點通往台北各區"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {transportOptions.map((transport, index) => (
@@ -75,34 +75,41 @@ const Transport = () => {
       </div>
       
       <div className="mt-12 bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-amber-100">
-        <h2 className="text-2xl font-medium text-gray-800 mb-6">交通攻略</h2>
+        <h2 className="text-2xl font-medium text-gray-800 mb-6">交通路線詳解</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <h3 className="font-medium text-gray-700 mb-4">熱門路線推薦</h3>
+            <h3 className="font-medium text-gray-700 mb-4">捷運網絡優勢</h3>
             <div className="space-y-3">
-              <div className="bg-blue-50 p-3 rounded-lg">
-                <p className="font-medium text-blue-800">往台北車站</p>
-                <p className="text-sm text-blue-600">捷運古亭站 → 台北車站（8分鐘）</p>
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <p className="font-medium text-blue-800 mb-2">小南門站（最近）</p>
+                <p className="text-sm text-blue-600">松山新店線 • 步行300公尺內</p>
               </div>
-              <div className="bg-green-50 p-3 rounded-lg">
-                <p className="font-medium text-green-800">往西門町</p>
-                <p className="text-sm text-green-600">捷運古亭站 → 西門站（6分鐘）</p>
+              <div className="bg-green-50 p-4 rounded-lg">
+                <p className="font-medium text-green-800 mb-2">中正紀念堂站</p>
+                <p className="text-sm text-green-600">雙線交會 • 轉乘樞紐 • 步行300公尺</p>
               </div>
-              <div className="bg-purple-50 p-3 rounded-lg">
-                <p className="font-medium text-purple-800">往士林夜市</p>
-                <p className="text-sm text-purple-600">捷運淡水信義線直達（20分鐘）</p>
+              <div className="bg-purple-50 p-4 rounded-lg">
+                <p className="font-medium text-purple-800 mb-2">西門站</p>
+                <p className="text-sm text-purple-600">板南線交會 • 步行1.2公里</p>
               </div>
             </div>
           </div>
           <div>
-            <h3 className="font-medium text-gray-700 mb-4">省錢小秘訣</h3>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>• 申請學生悠遊卡享優惠票價</li>
-              <li>• YouBike會員前30分鐘免費</li>
-              <li>• 公車捷運轉乘有優惠</li>
-              <li>• 避開尖峰時段搭乘計程車</li>
-              <li>• 使用共乘APP分攤車資</li>
-            </ul>
+            <h3 className="font-medium text-gray-700 mb-4">公車路線網絡</h3>
+            <div className="space-y-3 text-sm text-gray-600">
+              <div className="bg-amber-50 p-3 rounded-lg">
+                <p className="font-medium text-amber-800">往中和方向</p>
+                <p className="text-amber-600">5、241、243路線</p>
+              </div>
+              <div className="bg-orange-50 p-3 rounded-lg">
+                <p className="font-medium text-orange-800">往國父紀念館</p>
+                <p className="text-orange-600">235、663路線</p>
+              </div>
+              <div className="bg-red-50 p-3 rounded-lg">
+                <p className="font-medium text-red-800">特色路線</p>
+                <p className="text-red-600">251深坑、270中華科大、644新店青潭、706三峽</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
